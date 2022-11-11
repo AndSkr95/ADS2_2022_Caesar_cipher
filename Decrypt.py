@@ -2,7 +2,12 @@ import string
 
 
 class Decrypt:
-    def __init__(self, shift_pattern, message):
+    def __init__(self, shift_pattern: int, message: str):
+        """
+        Decrypts a Caesar Cipher message (Rot(n) not implemented).
+        :param shift_pattern: the number of positions to shift.
+        :param message: Encrypted message to decrypt
+        """
         self._shift_pattern = shift_pattern
         self._encrypted_message = message
         self.result = ""
@@ -22,4 +27,3 @@ class Decrypt:
             else:
                 self.result += char
 
-        return self.result
